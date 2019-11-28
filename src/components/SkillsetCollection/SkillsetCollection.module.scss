@@ -1,0 +1,81 @@
+@import '_utils';
+
+.this {
+  display: grid;
+  grid-column-gap: 48px;
+  grid-row-gap: 48px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.blurb {
+  @include typo-feature-3-text;
+  margin-bottom: 18px;
+  padding-right: 24px;
+}
+
+.index {
+  @include typo-feature-3-index;
+  margin-bottom: 24px;
+  position: absolute;
+  top: -0.5em;
+  background: #fff;
+  padding: 0 8px;
+  left: -42px;
+  color: #5c5c5c;
+}
+
+.item {
+  align-self: center;
+  border: 1px dotted #333;
+  padding: 24px;
+  position: relative;
+}
+
+.tools {
+  @include uads-dl(
+    $display: block,
+    $margin-bottom: 0,
+    $margin-left: 0px,
+    $margin-right: 0px,
+    $margin-top: 16px
+  );
+}
+
+.toolsLabel {
+  @include uads-dt($display: block);
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.toolsValue {
+  @include uads-dd($display: block, $margin-left: 0);
+}
+
+.title {
+  @include typo-feature-3-heading;
+  margin-bottom: 24px;
+}
+
+@media (max-width: $bp-max-tablet) {
+  .this {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .index {
+    font-size: 48px;
+    left: -24px;
+  }
+}
+
+@media (max-width: $bp-max-mobile-landscape) {
+  .this {
+    grid-template-columns: 1fr;
+  }
+}

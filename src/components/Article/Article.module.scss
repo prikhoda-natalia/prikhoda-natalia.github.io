@@ -1,0 +1,57 @@
+@import '_utils';
+
+.this {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.content {
+  max-width: 375px;
+}
+
+.intro {
+  font-weight: bold;
+  font-size: 1.1rem;
+  max-width: 245px;
+}
+
+.image {
+  width: 100%;
+  display: block;
+}
+
+.imageWrapper {
+  margin-bottom: 32px;
+  position: relative;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 10px solid rgba(80, 59, 42, 0.5);
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: $bp-max-tablet) {
+  .this {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: $bp-max-mobile-landscape) {
+  .this {
+    padding: 24px;
+  }
+}

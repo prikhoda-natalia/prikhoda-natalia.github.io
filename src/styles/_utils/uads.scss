@@ -1,0 +1,1053 @@
+/* stylelint-disable */
+
+/**
+  * This file contains mixins of tags with default styles across all browsers (User Agent Stylesheet).
+  * Call mixin and set up default styles. If you need to use other properties - add them in component's style file.
+**/
+
+@mixin uads-a(
+  $color: #00c,
+  $color--active: red,
+  $color--active-link: red,
+  $color--active-visited: red,
+  $color--visited: #800080,
+  $cursor: pointer,
+  $outline-color--active-link: currentColor,
+  $outline-style--active-link: dotted,
+  $outline-width--active-link: 1px,
+  $outline-color--active-visited: currentColor,
+  $outline-style--active-visited: dotted,
+  $outline-width--active-visited: 1px,
+  $outline-color--focus: currentColor,
+  $outline-style--focus: dotted,
+  $outline-width--focus: 1px,
+  $text-decoration: underline,
+  $user-focus: normal,
+  $user-select: element
+) {
+  color: $color;
+  text-decoration: $text-decoration;
+  cursor: $cursor;
+  -webkit-user-select: $user-select;
+  -moz-user-select: $user-select;
+  -ms-user-select: $user-select;
+  -moz-user-focus: $user-focus;
+
+  &:active {
+    color: $color--active;
+  }
+
+  &:visited {
+    color: $color--visited;
+  }
+
+  &:link:active {
+    color: $color--active-link;
+    outline-width: $outline-width--active-link;
+    outline-style: $outline-style--active-link;
+    outline-color: $outline-color--active-link;
+  }
+
+  &:visited:active {
+    color: $color--active-visited;
+    outline-width: $outline-width--active-visited;
+    outline-style: $outline-style--active-visited;
+    outline-color: $outline-color--active-visited;
+  }
+
+  &:focus {
+    outline-width: $outline-width--focus;
+    outline-style: $outline-style--focus;
+    outline-color: $outline-color--focus;
+  }
+}
+
+@mixin uads-body(
+  $display: block,
+  $margin-top: 0,
+  $margin-left: 0,
+  $margin-bottom: 0,
+  $margin-right: 0,
+  $outline-color--focus: currentColor,
+  $outline-style--focus: dotted,
+  $outline-width--focus: 1px
+) {
+  display: $display;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+
+  &:focus {
+    outline-width: $outline-width--focus;
+    outline-style: $outline-style--focus;
+    outline-color: $outline-color--focus;
+  }
+}
+
+@mixin uads-button(
+  $align-items: flex-start,
+  $appearance: none,
+  $background-color: rgba(255, 255, 255, 0.01),
+  $border-color: #4c4c4c,
+  $border-style: solid,
+  $border-style--active: inset,
+  $border-style--active-disabled: inset,
+  $border-width: 1px,
+  $box-align: center,
+  $box-sizing: border-box,
+  $color: inherit,
+  $color--active: inherit,
+  $color--disabled: GrayText,
+  $cursor: default,
+  $display: inline-block,
+  $font-family: inherit,
+  $font-size: inherit,
+  $font-style: normal,
+  $font-variant: normal,
+  $font-weight: inherit,
+  $letter-spacing: normal,
+  $line-height: inherit,
+  $margin-left: 0,
+  $margin-right: 0,
+  $margin-bottom: 0,
+  $margin-top: 0,
+  $outline-color--focus: #1f5ccf,
+  $outline-style--focus: auto,
+  $outline-width--focus: 3px,
+  $outline-offset--focus: 0,
+  $padding-top: 0,
+  $padding-right: 0,
+  $padding-bottom: 0,
+  $padding-left: 0,
+  $text-align: center,
+  $text-indent: 0,
+  $text-rendering: auto,
+  $text-shadow: none,
+  $text-transform: none,
+  $user-select: element,
+  $white-space: normal,
+  $word-spacing: normal,
+  $writing-mode: horizontal-tb
+) {
+  display: $display;
+  align-items: $align-items;
+  -webkit-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+  padding-top: $padding-top;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  padding-left: $padding-left;
+  color: $color;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  font-family: $font-family;
+  font-style: $font-style;
+  font-variant: $font-variant;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  white-space: $white-space;
+  text-align: $text-align;
+  text-transform: $text-transform;
+  text-indent: $text-indent;
+  text-shadow: $text-shadow;
+  word-spacing: $word-spacing;
+  background-color: $background-color;
+  border-color: $border-color;
+  border-style: $border-style;
+  border-width: $border-width;
+  cursor: $cursor;
+  -webkit-appearance: $appearance;
+  -webkit-user-select: $user-select;
+  -moz-user-select: $user-select;
+  -ms-user-select: $user-select;
+  -khtml-user-select: $user-select;
+  -webkit-box-align: $box-align;
+  box-align: $box-align;
+  text-rendering: $text-rendering;
+  -webkit-writing-mode: $writing-mode !important;
+  writing-mode: $writing-mode;
+
+  &:active {
+    color: $color--active;
+    border-style: $border-style--active;
+  }
+
+  &:disabled {
+    color: $color--disabled;
+  }
+
+  &:active:disabled {
+    border-style: $border-style--active-disabled;
+  }
+
+  &:focus {
+    outline-width: $outline-width--focus;
+    outline-style: $outline-style--focus;
+    outline-color: $outline-color--focus;
+    outline-offset: $outline-offset--focus;
+  }
+}
+
+@mixin uads-dl(
+  $display: block,
+  $margin-bottom: 1em,
+  $margin-left: 0px,
+  $margin-right: 0px,
+  $margin-top: 1em
+) {
+  display: $display;
+  margin-block-start: $margin-top;
+  margin-block-end: $margin-bottom;
+  margin-inline-start: $margin-left;
+  margin-inline-end: $margin-right;
+}
+
+@mixin uads-dd($display: block, $margin-left: 40px) {
+  display: $display;
+  margin-inline-start: $margin-left;
+}
+
+@mixin uads-dt($display: block) {
+  display: $display;
+}
+
+@mixin uads-em($font-style: italic) {
+  font-style: $font-style;
+}
+
+@mixin uads--focus($outline-color: #1f5ccf, $outline-style: solid, $outline-width: 3px) {
+  outline-width: $outline-width;
+  outline-style: $outline-style;
+  outline-color: $outline-color;
+}
+
+@mixin uads-form(
+  $display: block,
+  $margin-bottom: 1em,
+  $margin-left: 0,
+  $margin-top: 0,
+  $margin-right: 0
+) {
+  display: $display !important;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+}
+
+@mixin uads-h1(
+  $display: block,
+  $font-size: 2em,
+  $font-weight: bold,
+  $margin-bottom: 0.67em,
+  $margin-left: 0,
+  $margin-top: 0.67em,
+  $margin-right: 0
+) {
+  display: $display;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  -webkit-margin-after: $margin-bottom;
+  -webkit-margin-before: $margin-top;
+  -webkit-margin-end: $margin-right;
+  -webkit-margin-start: $margin-left;
+
+  article &,
+  aside &,
+  nav &,
+  section &,
+  article article &,
+  aside aside &,
+  nav nav &,
+  section section &,
+  article article article &,
+  aside aside aside &,
+  nav nav nav &,
+  section section section &,
+  article article article article &,
+  aside aside aside aside &,
+  nav nav nav nav &,
+  section section section section &,
+  article article article article article &,
+  aside aside aside aside aside &,
+  nav nav nav nav nav &,
+  section section section section section & {
+    font-size: $font-size;
+    -webkit-margin-after: $margin-bottom;
+    -webkit-margin-before: $margin-top;
+  }
+}
+
+@mixin uads-h2(
+  $display: block,
+  $font-size: 1.5em,
+  $font-weight: bold,
+  $margin-bottom: 0.83em,
+  $margin-left: 0,
+  $margin-right: 0,
+  $margin-top: 0.83em
+) {
+  display: $display;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  -webkit-margin-after: $margin-bottom;
+  -webkit-margin-before: $margin-top;
+  -webkit-margin-end: $margin-right;
+  -webkit-margin-start: $margin-left;
+}
+
+@mixin uads-h3(
+  $display: block,
+  $font-size: 1.17em,
+  $font-weight: bold,
+  $margin-bottom: 0.83em,
+  $margin-left: 0,
+  $margin-right: 0,
+  $margin-top: 0.83em
+) {
+  display: $display;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  -webkit-margin-after: $margin-bottom;
+  -webkit-margin-before: $margin-top;
+  -webkit-margin-end: $margin-right;
+  -webkit-margin-start: $margin-left;
+}
+
+@mixin uads-h4(
+  $display: block,
+  $font-weight: bold,
+  $margin-bottom: 1.33em,
+  $margin-left: 0,
+  $margin-right: 0,
+  $margin-top: 1.33em
+) {
+  display: $display;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+  font-weight: $font-weight;
+  -webkit-margin-after: $margin-bottom;
+  -webkit-margin-before: $margin-top;
+  -webkit-margin-end: $margin-right;
+  -webkit-margin-start: $margin-left;
+}
+
+@mixin uads-h5(
+  $display: block,
+  $font-size: 0.83em,
+  $font-weight: bold,
+  $margin-bottom: 1.67em,
+  $margin-left: 0,
+  $margin-right: 0,
+  $margin-top: 1.67em
+) {
+  display: $display;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  -webkit-margin-after: $margin-bottom;
+  -webkit-margin-before: $margin-top;
+  -webkit-margin-end: $margin-right;
+  -webkit-margin-start: $margin-left;
+}
+
+@mixin uads-h6(
+  $display: block,
+  $font-size: 0.67em,
+  $font-weight: bold,
+  $margin-bottom: 2.33em,
+  $margin-left: 0,
+  $margin-right: 0,
+  $margin-top: 2.33em
+) {
+  display: $display;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  -webkit-margin-after: $margin-bottom;
+  -webkit-margin-before: $margin-top;
+  -webkit-margin-end: $margin-right;
+  -webkit-margin-start: $margin-left;
+}
+
+@mixin uads-input(
+  $appearance: textfield,
+  $background-color: white,
+  $border-color: #4c4c4c,
+  $border-color--readonly: rgb(188, 188, 188),
+  $border-radius: 5px,
+  $border-style: solid,
+  $border-width: 1px,
+  $box-sizing: content-box,
+  $color: #000,
+  $cursor: auto,
+  $display: inline-block,
+  $font-family: sans-serif,
+  $font-size: 13px,
+  $font-weight: 400,
+  $height: auto,
+  $letter-spacing: normal,
+  $line-height: normal,
+  $margin-bottom: 0,
+  $margin-left: 0,
+  $margin-right: 0,
+  $margin-top: 0,
+  $opacity--disabled: 0.4,
+  $outline-offset--focus: -2px,
+  $outline-style--focus-readonly: none,
+  $padding-bottom: 0.3em,
+  $padding-left: 0.5em,
+  $padding-right: 0.5em,
+  $padding-top: 0.2em,
+  $rtl-ordering: logical,
+  $text-align: start,
+  $text-indent: 0,
+  $text-shadow: none,
+  $text-transform: none,
+  $user-select: text,
+  $word-spacing: normal,
+  $writing-mode: horizontal-tb,
+  $xul-box-orient: inherit
+) {
+  display: $display;
+  box-sizing: $box-sizing;
+  height: $height;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+  padding-top: $padding-top;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  padding-left: $padding-left;
+  color: $color;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  font-family: $font-family;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  text-align: $text-align;
+  text-transform: $text-transform;
+  text-indent: $text-indent;
+  text-shadow: $text-shadow;
+  word-spacing: $word-spacing;
+  background-color: $background-color;
+  border-color: $border-color;
+  border-style: $border-style;
+  border-width: $border-width;
+  border-radius: $border-radius;
+  cursor: $cursor;
+  -webkit-appearance: $appearance;
+  -webkit-user-select: $user-select;
+  -webkit-rtl-ordering: $rtl-ordering;
+  -webkit-writing-mode: $writing-mode !important;
+  -moz-xul-box-orient: $xul-box-orient;
+
+  &:disabled {
+    opacity: $opacity--disabled;
+  }
+
+  &:-webkit-autofill {
+    background-color: rgb(250, 255, 189) !important;
+    background-image: none !important;
+  }
+
+  &[readonly] {
+    border-color: $border-color--readonly;
+
+    &:focus {
+      outline-style: $outline-style--focus-readonly;
+    }
+  }
+
+  &:focus {
+    outline-offset: $outline-offset--focus;
+  }
+}
+
+@mixin uads-input-checkbox(
+  $appearance: checkbox,
+  $background--checked: rgba(0, 0, 0, 0.8),
+  $background--checked-disabled: rgba(0, 0, 0, 0.8),
+  $background-color: rgba(255, 255, 255, 0.01),
+  $border-color: #4c4c4c,
+  $border-color--checked: rgba(255, 255, 255, 0),
+  $border-radius: 5px,
+  $border-style: solid,
+  $border-width: 1px,
+  $box-sizing: border-box,
+  $color: buttontext,
+  $height: 16px,
+  $margin-bottom: 3px,
+  $margin-left: 2px,
+  $margin-right: 2px,
+  $margin-top: 3px,
+  $opacity--checked-disabled: 0.4,
+  $outline-offset--focus: 0,
+  $padding-bottom: 0,
+  $padding-left: 0,
+  $padding-right: 0,
+  $padding-top: 0,
+  $user-select: element,
+  $width: 16px
+) {
+  -webkit-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+  width: $width;
+  height: $height;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+  padding-top: $padding-top;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  padding-left: $padding-left;
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+  border-style: $border-style;
+  border-width: $border-width;
+  border-radius: $border-radius;
+  -webkit-appearance: $appearance;
+  -khtml-user-select: $user-select;
+
+  &:checked {
+    background: $background--checked;
+    border-color: $border-color--checked;
+
+    &:disabled {
+      background: $background--checked-disabled;
+      opacity: $opacity--checked-disabled;
+    }
+  }
+
+  &:focus {
+    outline-offset: $outline-offset--focus;
+  }
+}
+
+@mixin uads-input-file(
+  $align-items: baseline,
+  $appearance: initial,
+  $background-color: initial,
+  $border-color: initial,
+  $border-style: initial,
+  $border-width: initial,
+  $box-align: baseline,
+  $color: inherit,
+  $outline-offset--focus: 0,
+  $padding-bottom: initial,
+  $padding-left: initial,
+  $padding-right: initial,
+  $padding-top: initial,
+  $text-align: start
+) {
+  align-items: $align-items;
+  padding-top: $padding-top;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  padding-left: $padding-left;
+  color: $color;
+  text-align: $text-align !important;
+  background-color: $background-color;
+  border-color: $border-color;
+  border-style: $border-style;
+  border-width: $border-width;
+  -webkit-appearance: $appearance;
+  -webkit-box-align: $box-align;
+
+  &:focus {
+    outline-offset: $outline-offset--focus;
+  }
+}
+
+@mixin uads-file-upload-button(
+  $align-items: flex-start,
+  $appearance: push-button,
+  $background-color: rgba(255, 255, 255, 0.01),
+  $border-color: #4c4c4c,
+  $border-style: solid,
+  $border-style--active-input: inset,
+  $border-style--active-disabled-input: outset,
+  $border-width: 1px,
+  $box-align: center,
+  $box-sizing: border-box,
+  $color: ButtonText,
+  $color--active: ActiveButtonText,
+  $color--disabled-input: GrayText,
+  $cursor: default,
+  $font-family: Helvetica,
+  $font-size: 11px,
+  $margin-bottom: 0,
+  $margin-left: 0,
+  $margin-right: 0,
+  $margin-top: 0,
+  $outline-offset--focus-input: 0,
+  $padding-bottom: 3px,
+  $padding-left: 6px,
+  $padding-right: 6px,
+  $padding-top: 2px,
+  $text-align: center,
+  $white-space: pre
+) {
+  align-items: $align-items;
+  -webkit-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+  padding-top: $padding-top;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  padding-left: $padding-left;
+  color: $color;
+  font-size: $font-size;
+  font-family: $font-family;
+  white-space: $white-space;
+  text-align: $text-align;
+  background-color: $background-color;
+  border-color: $border-color;
+  border-style: $border-style;
+  border-width: $border-width;
+  cursor: $cursor;
+  -webkit-appearance: $appearance;
+  -webkit-box-align: $box-align;
+
+  &:active {
+    color: $color--active;
+  }
+
+  :disabled & {
+    color: $color--disabled-input;
+  }
+
+  :active & {
+    border-style: $border-style--active-input;
+  }
+
+  :active:disabled & {
+    border-style: $border-style--active-disabled-input;
+  }
+
+  :focus & {
+    outline-offset: $outline-offset--focus-input;
+  }
+}
+
+@mixin uads-input-password(
+  $appearance: textfield,
+  $background-color: white,
+  $border-color: #4c4c4c,
+  $border-radius: 5px,
+  $border-style: solid,
+  $border-width: 1px,
+  $cursor: text,
+  $font-family: 'Helvetica, -webkit-pictograph',
+  $font-size: 11px,
+  $padding-bottom: 0.3em,
+  $padding-left: 0.5em,
+  $padding-right: 0.5em,
+  $padding-top: 0.2em,
+  $rtl-ordering: logical,
+  $text-align: left,
+  $text-security: disc,
+  $user-select: text
+) {
+  padding-top: $padding-top;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  padding-left: $padding-left;
+  font-size: $font-size;
+  font-family: $font-family;
+  text-align: $text-align;
+  background-color: $background-color;
+  border-color: $border-color;
+  border-style: $border-style;
+  border-width: $border-width;
+  border-radius: $border-radius;
+  cursor: $cursor;
+  -webkit-appearance: $appearance;
+  -webkit-user-select: $user-select;
+  -webkit-rtl-ordering: $rtl-ordering;
+  -webkit-text-security: $text-security !important;
+}
+
+@mixin uads-input-radio(
+  $appearance: radio,
+  $background--checked: rgba(0, 0, 0, 0.8),
+  $background--checked-disabled: rgba(0, 0, 0, 0.8),
+  $background-color: rgba(255, 255, 255, 0.01),
+  $border-color: #4c4c4c,
+  $border-color--checked: rgba(255, 255, 255, 0),
+  $border-radius: 50%,
+  $border-style: solid,
+  $border-width: 1px,
+  $box-sizing: border-box,
+  $color: buttontext,
+  $height: 16px,
+  $margin-bottom: 3px,
+  $margin-left: 2px,
+  $margin-right: 2px,
+  $margin-top: 3px,
+  $opacity--checked-disabled: 0.4,
+  $outline-offset--focus: 0,
+  $padding-bottom: 0,
+  $padding-left: 0,
+  $padding-right: 0,
+  $padding-top: 0,
+  $user-select: element,
+  $width: 16px
+) {
+  -webkit-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+  width: $width;
+  height: $height;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+  padding-top: $padding-top;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  padding-left: $padding-left;
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+  border-style: $border-style;
+  border-width: $border-width;
+  border-radius: $border-radius;
+  -webkit-appearance: $appearance;
+  -khtml-user-select: $user-select;
+
+  &:checked {
+    background: $background--checked;
+    border-color: $border-color--checked;
+
+    &:disabled {
+      background: $background--checked-disabled;
+      opacity: $opacity--checked-disabled;
+    }
+  }
+
+  &:focus {
+    outline-offset: $outline-offset--focus;
+  }
+}
+
+@mixin uads-li(
+  $display: list-item,
+  $float-edge: margin-box,
+  $flow-mode: -khtml-around-floats,
+  $text-align: -webkit-match-parent
+) {
+  display: $display;
+  text-align: $text-align;
+  -khtml-flow-mode: $flow-mode;
+  -moz-float-edge: $float-edge;
+}
+
+@mixin uads-p(
+  $display: block,
+  $margin-bottom: 0,
+  $margin-left: 0,
+  $margin-right: 0,
+  $margin-top: 0
+) {
+  display: $display;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+  -webkit-margin-after: $margin-bottom;
+  -webkit-margin-before: $margin-top;
+  -webkit-margin-end: $margin-right;
+  -webkit-margin-start: $margin-left;
+
+  li > & {
+    margin-top: auto;
+  }
+}
+
+@mixin uads-placeholder(
+  $line-height: normal,
+  $color: darkGray,
+  $overflow: hidden,
+  $pointer-events: none,
+  $text-indent: 2px,
+  $text-security: none,
+  $white-space: pre,
+  $word-wrap: normal
+) {
+  overflow: $overflow;
+  color: $color;
+  line-height: $line-height;
+  white-space: $white-space;
+  text-indent: $text-indent;
+  word-wrap: $word-wrap;
+  pointer-events: $pointer-events !important;
+  -webkit-text-security: $text-security;
+}
+
+@mixin uads-select(
+  $align-items: center,
+  $appearance: menulist,
+  $background-color: rgba(255, 255, 255, 0.01),
+  $border-color: #4c4c4c,
+  $border-color--focus: rgb(17, 46, 135),
+  $border-radius: 5px,
+  $border-style: solid,
+  $border-width: 1px,
+  $box-align: center,
+  $box-sizing: border-box,
+  $color: #000,
+  $color--disabled: GrayText,
+  $cursor: default,
+  $display: inline-block,
+  $font-family: Helvetica,
+  $font-size: 13px,
+  $font-weight: 400,
+  $letter-spacing: normal,
+  $line-height: normal,
+  $margin-bottom: 0,
+  $margin-left: 0,
+  $margin-right: 0,
+  $margin-top: 0,
+  $outline-offset--focus: -2px,
+  $padding-bottom: 0,
+  $padding-left: 0.4em,
+  $padding-right: 0.4em,
+  $padding-top: 0,
+  $rtl-ordering: logical,
+  $text-align: start,
+  $text-indent: 0,
+  $text-shadow: none,
+  $text-transform: none,
+  $user-select: element,
+  $white-space: pre,
+  $word-spacing: normal,
+  $writing-mode: horizontal-tb,
+  $xul-box-orient: inherit
+) {
+  display: $display;
+  align-items: $align-items;
+  -webkit-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+  padding-top: $padding-top;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  padding-left: $padding-left;
+  color: $color;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  font-family: $font-family;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  white-space: $white-space;
+  text-align: $text-align;
+  text-transform: $text-transform;
+  text-indent: $text-indent;
+  text-shadow: $text-shadow;
+  word-spacing: $word-spacing;
+  background-color: $background-color;
+  border-color: $border-color;
+  border-style: $border-style;
+  border-width: $border-width;
+  -webkit-border-radius: $border-radius;
+  border-radius: $border-radius;
+  cursor: $cursor;
+  -webkit-appearance: $appearance;
+  -khtml-user-select: $user-select;
+  -webkit-box-align: $box-align;
+  -webkit-rtl-ordering: $rtl-ordering;
+  -webkit-writing-mode: $writing-mode !important;
+  -moz-xul-box-orient: $xul-box-orient;
+
+  &:focus {
+    border-color: $border-color--focus;
+    outline-offset: $outline-offset--focus;
+  }
+
+  &:disabled {
+    color: $color--disabled;
+  }
+}
+
+@mixin uads-textarea(
+  $appearance: textarea,
+  $background-color: white,
+  $border-color: #4c4c4c,
+  $border-color--readonly: rgb(188, 188, 188),
+  $border-style: solid,
+  $border-width: 1px,
+  $box-orient: vertical,
+  $color: #000,
+  $cursor: auto,
+  $display: inline-block,
+  $flex-direction: column,
+  $font-family: Helvetica,
+  $font-size: 13px,
+  $font-weight: 400,
+  $letter-spacing: normal,
+  $line-break: after-white-space,
+  $line-height: normal,
+  $margin-bottom: 0,
+  $margin-left: 0,
+  $margin-top: 0,
+  $margin-right: 0,
+  $nbsp-mode: space,
+  $opacity--disabled: 0.4,
+  $outline-offset--focus: -2px,
+  $padding-bottom: 1px,
+  $padding-left: 1px,
+  $padding-right: 1px,
+  $padding-top: 1px,
+  $resize: auto,
+  $rtl-ordering: logical,
+  $text-align: start,
+  $text-indent: 0,
+  $text-shadow: none,
+  $text-transform: none,
+  $user-select: text,
+  $white-space: pre-wrap,
+  $word-spacing: normal,
+  $word-wrap: break-word,
+  $writing-mode: horizontal-tb
+) {
+  display: $display;
+  flex-direction: $flex-direction;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+  padding-top: $padding-top;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  padding-left: $padding-left;
+  color: $color;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  font-family: $font-family;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  white-space: $white-space;
+  text-align: $text-align;
+  text-transform: $text-transform;
+  text-indent: $text-indent;
+  text-shadow: $text-shadow;
+  word-wrap: $word-wrap;
+  word-spacing: $word-spacing;
+  background-color: $background-color;
+  border-color: $border-color;
+  border-style: $border-style;
+  border-width: $border-width;
+  cursor: $cursor;
+  -webkit-appearance: $appearance;
+  resize: $resize;
+  -webkit-user-select: $user-select;
+  -webkit-box-orient: $box-orient;
+  -webkit-line-break: $line-break;
+  -webkit-nbsp-mode: $nbsp-mode;
+  -webkit-rtl-ordering: $rtl-ordering;
+  -webkit-writing-mode: $writing-mode !important;
+
+  &:disabled {
+    opacity: $opacity--disabled;
+  }
+
+  &[readonly] {
+    border-color: $border-color--readonly;
+  }
+
+  &:focus {
+    outline-offset: $outline-offset--focus;
+  }
+}
+
+@mixin uads-ul(
+  $counter-reset: -html-counter 0,
+  $display: block,
+  $list-style-position: outside,
+  $list-style-type: disc,
+  $margin-bottom: 1em,
+  $margin-left: 0,
+  $margin-right: 0,
+  $margin-top: 1em,
+  $padding-bottom: 0,
+  $padding-left: 40px,
+  $padding-right: 0,
+  $padding-top: 0
+) {
+  display: $display;
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+  padding-top: $padding-top;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  padding-left: $padding-left;
+  list-style-position: $list-style-position;
+  list-style-type: $list-style-type;
+  -moz-counter-reset: $counter-reset;
+  counter-reset: $counter-reset;
+  -webkit-margin-after: $margin-bottom;
+  -webkit-margin-before: $margin-top;
+  -webkit-margin-end: $margin-right;
+  -webkit-margin-start: $margin-left;
+  -webkit-padding-start: $padding-left;
+
+  ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-before: 0;
+
+    ul {
+      list-style-type: square;
+    }
+  }
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: circle;
+    list-style-type: circle;
+    -webkit-margin-after: 0;
+    -webkit-margin-before: 0;
+
+    ul {
+      list-style-type: square;
+    }
+  }
+}

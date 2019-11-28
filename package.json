@@ -1,0 +1,57 @@
+{
+  "author": {
+    "name": "Natalia Prikhoda",
+    "email": "prikhoda.natalia.webdev@gmail.com",
+    "url": "https://prikhoda-natalia.github.io/"
+  },
+  "bugs": {
+    "url": "https://github.com/prikhoda-natalia/prikhoda-natalia.github.io/issues"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "gatsby": "^2.17.6",
+    "gatsby-plugin-manifest": "^2.2.26",
+    "gatsby-plugin-offline": "^3.0.18",
+    "gatsby-plugin-react-helmet": "^3.1.13",
+    "gatsby-plugin-sass": "^2.1.20",
+    "gatsby-plugin-sitemap": "^2.2.19",
+    "node-sass": "^4.13.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-helmet": "^5.2.1",
+    "typeface-inconsolata": "^0.0.72",
+    "typeface-montserrat": "^0.0.75",
+    "typeface-nanum-gothic-coding": "^0.0.63",
+    "typeface-open-sans": "^0.0.75",
+    "typeface-playfair-display": "^0.0.72"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "prettier": "^1.18.2"
+  },
+  "description": "A personal front-end developer CV website built with Gatsby.js",
+  "homepage": "https://prikhoda-natalia.github.io/",
+  "keywords": [
+    "web developer",
+    "front-end developer",
+    "frontend developer",
+    "UI developer",
+    "personal website",
+    "cv website",
+    "resume website"
+  ],
+  "license": "MIT",
+  "name": "prikhoda-natalia-webdev-cv",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prikhoda-natalia/prikhoda-natalia.github.io"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop -H 0.0.0.0",
+    "deploy": "gatsby build && gh-pages -d public -b master"
+  },
+  "version": "1.0.0"
+}

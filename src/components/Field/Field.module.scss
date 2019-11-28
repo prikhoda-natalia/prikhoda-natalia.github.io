@@ -1,0 +1,141 @@
+@import '_utils';
+
+$input-background-color: #eee;
+$input-border-color: #fafafa;
+$input-border-color--focus: #333;
+$input-border-radius: 4px;
+$input-border-style: solid;
+$input-border-width: 1px;
+$input-font-family: inherit;
+$input-font-size: 14px;
+$input-font-weight: 400;
+$input-line-height: 1.5;
+$input-outline-style--focus: none;
+$input-padding-bottom: 8px;
+$input-padding-left: 12px;
+$input-padding-right: 12px;
+$input-padding-top: 8px;
+$input-text-color: #333;
+$input-width: 100%;
+
+.this {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputWrapper {
+}
+
+.label {
+  @include typo-label;
+  margin-bottom: 8px;
+  margin-left: 4px;
+}
+
+.textarea {
+  @include uads-textarea(
+    $appearance: textarea,
+    $background-color: $input-background-color,
+    $border-color: $input-border-color,
+    $border-color--readonly: rgb(188, 188, 188),
+    $border-style: $input-border-style,
+    $border-width: $input-border-width,
+    $box-orient: vertical,
+    $color: $input-text-color,
+    $cursor: auto,
+    $display: inline-block,
+    $flex-direction: column,
+    $font-family: $input-font-family,
+    $font-size: $input-font-size,
+    $font-weight: $input-font-weight,
+    $letter-spacing: normal,
+    $line-break: after-white-space,
+    $line-height: $input-line-height,
+    $margin-bottom: 0,
+    $margin-left: 0,
+    $margin-top: 0,
+    $margin-right: 0,
+    $nbsp-mode: space,
+    $opacity--disabled: 0.4,
+    $outline-offset--focus: -2px,
+    $padding-bottom: $input-padding-bottom,
+    $padding-left: $input-padding-left,
+    $padding-right: $input-padding-right,
+    $padding-top: $input-padding-top,
+    $resize: auto,
+    $rtl-ordering: logical,
+    $text-align: start,
+    $text-indent: 0,
+    $text-shadow: none,
+    $text-transform: none,
+    $user-select: text,
+    $white-space: pre-wrap,
+    $word-spacing: normal,
+    $word-wrap: break-word,
+    $writing-mode: horizontal-tb
+  );
+  width: $input-width;
+  border-radius: $input-border-radius;
+  min-height: 10rem;
+
+  &:focus {
+    @include uads--focus(
+      $outline-color: #333,
+      $outline-style: $input-outline-style--focus,
+      $outline-width: 1px
+    );
+    border-color: $input-border-color--focus;
+  }
+}
+
+.textInput {
+  @include uads-input(
+    $appearance: textfield,
+    $background-color: $input-background-color,
+    $border-color: $input-border-color,
+    $border-color--readonly: rgb(188, 188, 188),
+    $border-radius: $input-border-radius,
+    $border-style: $input-border-style,
+    $border-width: $input-border-width,
+    $box-sizing: border-box,
+    $color: $input-text-color,
+    $cursor: auto,
+    $display: inline-block,
+    $font-family: $input-font-family,
+    $font-size: $input-font-size,
+    $font-weight: $input-font-weight,
+    $height: auto,
+    $letter-spacing: normal,
+    $line-height: $input-line-height,
+    $margin-bottom: 0,
+    $margin-left: 0,
+    $margin-right: 0,
+    $margin-top: 0,
+    $opacity--disabled: 0.4,
+    $outline-offset--focus: -2px,
+    $outline-style--focus-readonly: none,
+    $padding-bottom: $input-padding-bottom,
+    $padding-left: $input-padding-left,
+    $padding-right: $input-padding-right,
+    $padding-top: $input-padding-top,
+    $rtl-ordering: logical,
+    $text-align: start,
+    $text-indent: 0,
+    $text-shadow: none,
+    $text-transform: none,
+    $user-select: text,
+    $word-spacing: normal,
+    $writing-mode: horizontal-tb,
+    $xul-box-orient: inherit
+  );
+  width: $input-width;
+
+  &:focus {
+    @include uads--focus(
+      $outline-color: #333,
+      $outline-style: $input-outline-style--focus,
+      $outline-width: 1px
+    );
+    border-color: $input-border-color--focus;
+  }
+}

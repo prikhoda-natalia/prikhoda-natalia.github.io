@@ -1,0 +1,15 @@
+@import '_utils';
+
+.this {
+  @include typo-cta-button;
+  display: flex;
+  padding: 12px 32px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 44px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+}
