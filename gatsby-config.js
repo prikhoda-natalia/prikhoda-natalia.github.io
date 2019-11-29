@@ -3,6 +3,8 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+const autoprefixer = require('autoprefixer');
+const browserslist = require('browserslist');
 
 const website = require('./config/website');
 
@@ -28,7 +30,8 @@ module.exports = {
         cssLoaderOptions: {
           localIdentName: '[folder]__[local]'
         },
-        includePaths: ['src/styles']
+        includePaths: ['src/styles'],
+        postCssPlugins: [autoprefixer({ browsers: browserslist() })]
       }
     },
     'gatsby-plugin-sitemap',
