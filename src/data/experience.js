@@ -1,15 +1,42 @@
 module.exports = [
   {
     details: {
+      companyName: 'Crypto web application "Noah"',
+      geo: 'Remote',
+      period: 'June 2021 - June 2022'
+    },
+    title: 'UI developer',
+    responsibilities: [
+      'Build responsive website and landing page with Gatsby.js',
+      'Develop mobile Web App UI components and pages based on designs from Figma using React.js',
+      'Create and maintain library of UI components using Storybook'
+    ],
+    tools: ['react.js', 'sass', 'typescript', 'storybook', 'gatsby.js']
+  },
+  {
+    details: {
+      companyName: 'Cloud ERP software "DEAR Systems"',
+      geo: 'Remote',
+      period: 'January 2020 - March 2021'
+    },
+    title: 'UI developer',
+    responsibilities: [
+      'Build responsive Web App UI using Vanilla JS and Angular.js',
+      'Create and maintain UI components library for cross-platform mobile applications (Cordova) using Angular.js'
+    ],
+    tools: ['angular.js', ' vanilla js', 'html5', 'sass']
+  },
+  {
+    details: {
       companyName: 'Freelance',
       geo: 'Remote',
-      period: 'October 2019 - Present'
+      period: 'October 2019 - January 2020'
     },
     title: 'Web developer',
     responsibilities: [
       'Develop UI components',
-      'Build responsive websites',
-      'Create custom CMS themes and plugins'
+      'Build responsive websites with Gatsby.js',
+      'Create custom WordPress themes and theme functionality plugins'
     ],
     tools: ['html5', 'sass', 'gulp', 'wordpress', 'timber']
   },
