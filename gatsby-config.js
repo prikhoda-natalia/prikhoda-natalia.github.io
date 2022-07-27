@@ -30,8 +30,11 @@ module.exports = {
         cssLoaderOptions: {
           localIdentName: '[folder]__[local]'
         },
-        includePaths: ['src/styles'],
-        postCssPlugins: [autoprefixer({ browsers: browserslist() })]
+        implementation: require("node-sass"),
+        postCssPlugins: [autoprefixer({ overrideBrowserslist: browserslist() })],
+        sassOptions: {
+          includePaths: ['src/styles'],
+        }
       }
     },
     'gatsby-plugin-sitemap',
