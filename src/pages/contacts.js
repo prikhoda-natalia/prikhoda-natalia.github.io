@@ -26,7 +26,7 @@ const ContactsPage = () => {
     },
     {
       label: 'Current location',
-      value: 'Moscow, Russia (most of my work is done remotely)'
+      value: 'Sintra, Portugal (most of my work is done remotely)'
     },
     {
       label: 'Speaking languages',
