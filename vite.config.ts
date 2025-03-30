@@ -5,6 +5,10 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   base: '/',
   plugins: [reactRouter(), tsconfigPaths()],
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true
+  },
   css: {
     preprocessorOptions: {
       scss: {
