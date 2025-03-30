@@ -8,7 +8,7 @@ import { menuItems } from '~/data/menu';
 const Contacts = () => {
   const contactDetails = [
     {
-      label: 'Email address',
+      label: 'Email',
       value: (
         <Link
           href="mailto:prikhoda.natalia.webdev@gmail.com"
@@ -17,16 +17,20 @@ const Contacts = () => {
       )
     },
     {
-      label: 'GitHub account',
+      label: 'LinkedIn',
+      value: <Link href="http://www.linkedin.com/in/prikhoda-natalia" value="prikhoda-natalia" />
+    },
+    {
+      label: 'GitHub',
       value: <Link href="https://github.com/prikhoda-natalia" value="prikhoda-natalia" />
     },
     {
-      label: 'Current location',
-      value: 'Sintra, Portugal (most of my work is done remotely)'
+      label: 'Portfolio',
+      value: <Link href="https://prikhoda-natalia.github.io/" value="prikhoda-natalia.github.io" />
     },
     {
-      label: 'Speaking languages',
-      value: 'Russian, English'
+      label: 'Current location',
+      value: 'Lisbon, Portugal, GMT +0'
     }
   ];
   return (
