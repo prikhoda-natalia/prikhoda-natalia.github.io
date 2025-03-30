@@ -1,0 +1,110 @@
+@use '../../styles/breakpoints' as *;
+
+.this {
+  align-self: center;
+  margin: 0 auto;
+}
+
+.wrapper {
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+
+.box {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Inconsolata', sans-serif;
+  line-height: 1.25;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 20px;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.6);
+  perspective-origin: 50% 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  text-decoration: none;
+  display: flex;
+
+  &_border {
+    z-index: 2;
+    width: 500px;
+    height: 300px;
+    border-style: solid;
+    background-color: #fddd9b;
+  }
+  &_margin {
+    z-index: 1;
+    width: 600px;
+    height: 400px;
+    border-style: dashed;
+    background-color: #f9cc9d;
+  }
+  &_padding {
+    z-index: 3;
+    width: 400px;
+    height: 200px;
+    border-style: dashed;
+    background-color: #c3d08b;
+  }
+  &_position {
+    z-index: 0;
+    width: 700px;
+    height: 500px;
+    border-style: dotted;
+    background-color: #fff;
+  }
+  &_size {
+    z-index: 4;
+    width: 300px;
+    height: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    background-color: #8cb6c0;
+  }
+
+  .wrapper:hover & {
+    background: #fff;
+
+    &_border:hover {
+      background: #fddd9b;
+    }
+    &_margin:hover {
+      background: #f9cc9d;
+    }
+    &_padding:hover {
+      background: #c3d08b;
+    }
+    &_position:hover {
+      background: #fff;
+    }
+    &_size:hover {
+      background: #8cb6c0;
+    }
+  }
+}
+@media (max-width: $bp-max-mobile-landscape) {
+  .wrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .box {
+    width: calc(50% - 16px);
+    height: 25vh;
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+  }
+}

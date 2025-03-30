@@ -1,0 +1,41 @@
+@use '../../../styles/uads' as *;
+
+.this {
+  @include uads-ul(
+    $counter-reset: -html-counter 0,
+    $display: flex,
+    $list-style-position: outside,
+    $list-style-type: none,
+    $margin-bottom: 0,
+    $margin-left: 0,
+    $margin-right: 0,
+    $margin-top: 0,
+    $padding-bottom: 0,
+    $padding-left: 0,
+    $padding-right: 0,
+    $padding-top: 0
+  );
+  font-weight: 400;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.25;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: inline-block;
+  text-transform: none;
+  padding: 2px 4px;
+
+  .this_dark & {
+    background-color: #5c5c5c;
+    color: #fff;
+    margin: 1px;
+  }
+  .this_light & {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #5c5c5c;
+    margin: 2px;
+  }
+}

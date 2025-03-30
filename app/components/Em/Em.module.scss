@@ -1,0 +1,6 @@
+@use '../../styles/uads' as *;
+
+.this {
+  @include uads-em($font-style: normal);
+  text-decoration: underline;
+}

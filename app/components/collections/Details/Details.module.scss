@@ -1,0 +1,46 @@
+@use '../../../styles/uads' as *;
+@use '../../../styles/breakpoints' as *;
+
+.this {
+  @include uads-dl(
+    $display: grid,
+    $margin-bottom: 0,
+    $margin-left: 0px,
+    $margin-right: 0px,
+    $margin-top: 0
+  );
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Inconsolata', serif;
+  line-height: 1.25;
+  grid-template-columns: auto 1fr;
+  grid-row-gap: 16px;
+}
+
+.label {
+  @include uads-dt($display: flex);
+  margin-right: 16px;
+  color: #5c5c5c;
+  font-size: 0.9em;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.value {
+  @include uads-dd($display: block, $margin-left: 0);
+}
+
+@media (max-width: $bp-max-mobile-landscape) {
+  .this {
+    grid-template-columns: 1fr;
+    grid-row-gap: 8px;
+  }
+
+  .label {
+    justify-content: flex-start;
+  }
+
+  .value {
+    margin-bottom: 16px;
+  }
+}
