@@ -1,0 +1,128 @@
+@use '../../../styles/uads' as *;
+@use '../../../styles/breakpoints' as *;
+
+.this {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.description {
+  @include uads-dl(
+    $display: block,
+    $margin-bottom: 0,
+    $margin-left: 24px,
+    $margin-right: 0px,
+    $margin-top: 0
+  );
+}
+
+.header {
+  display: flex;
+  padding-top: 24px;
+  padding-right: 0px;
+  padding-left: 48px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 45%;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  position: relative;
+  padding-bottom: 96px;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 24px;
+    left: 12px;
+    width: 24px;
+    height: 24px;
+    background: #5c5c5c;
+    border-radius: 50%;
+    border: 9px solid #fff;
+    box-sizing: border-box;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 24px;
+    height: 100%;
+    width: 1px;
+    background: #5c5c5c;
+  }
+}
+
+.descriptionLabel {
+  @include uads-dt($display: block);
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.descriptionValue {
+  @include uads-dd($display: block, $margin-left: 0);
+  margin-top: 24px;
+}
+
+.title {
+  @include uads-h3(
+    $display: block,
+    $font-size: 22px,
+    $font-weight: 700,
+    $margin-bottom: 16px,
+    $margin-left: 0,
+    $margin-right: 0,
+    $margin-top: 0
+  );
+  font-family: 'Playfair Display', serif;
+  line-height: 1.25;
+  padding-right: 48px;
+}
+
+@media (max-width: $bp-max-tablet) {
+  .this {
+    width: 100%;
+  }
+}
+
+@media (max-width: $bp-max-mobile-landscape) {
+  $left-space: 24px;
+
+  .description {
+    padding-left: 24px;
+  }
+
+  .header {
+    padding-left: 24px;
+  }
+  .item {
+    flex-direction: column;
+
+    &::after {
+      left: -12px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 1px;
+      background: #5c5c5c;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use './colors' as *;
+@use './uads' as *;
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include uads-body(
+    $display: block,
+    $margin-top: 0,
+    $margin-left: 0,
+    $margin-bottom: 0,
+    $margin-right: 0,
+    $outline-color--focus: currentColor,
+    $outline-style--focus: dotted,
+    $outline-width--focus: 1px
+  );
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  overflow-y: scroll;
+  color: $color-text-base;
+}
+
+p {
+  @include uads-p(
+    $display: block,
+    $margin-bottom: 1em,
+    $margin-left: 0,
+    $margin-right: 0,
+    $margin-top: 0
+  );
+}

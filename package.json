@@ -1,59 +1,47 @@
 {
-  "author": {
-    "name": "Natalia Prikhoda",
-    "email": "prikhoda.natalia.webdev@gmail.com",
-    "url": "https://prikhoda-natalia.github.io/"
-  },
-  "bugs": {
-    "url": "https://github.com/prikhoda-natalia/prikhoda-natalia.github.io/issues"
-  },
-  "dependencies": {
-    "autoprefixer": "^9.7.2",
-    "browserlist": "^1.0.1",
-    "classnames": "^2.2.6",
-    "gatsby": "^2.17.6",
-    "gatsby-plugin-manifest": "^2.2.26",
-    "gatsby-plugin-offline": "^3.0.18",
-    "gatsby-plugin-react-helmet": "^3.1.13",
-    "gatsby-plugin-sass": "^5.19.0",
-    "gatsby-plugin-sitemap": "^2.2.19",
-    "node-sass": "^7.0.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-helmet": "^5.2.1",
-    "typeface-inconsolata": "^0.0.72",
-    "typeface-montserrat": "^0.0.75",
-    "typeface-nanum-gothic-coding": "^0.0.63",
-    "typeface-open-sans": "^0.0.75",
-    "typeface-playfair-display": "^0.0.72"
-  },
-  "devDependencies": {
-    "gh-pages": "^2.1.1",
-    "prettier": "^1.18.2"
-  },
-  "description": "A personal front-end developer CV website built with Gatsby.js",
-  "homepage": "https://prikhoda-natalia.github.io/",
-  "keywords": [
-    "web developer",
-    "front-end developer",
-    "frontend developer",
-    "UI developer",
-    "personal website",
-    "cv website",
-    "resume website"
-  ],
-  "license": "MIT",
+  "version": "2.0.0",
   "name": "prikhoda-natalia-webdev-cv",
+  "description": "A personal front-end developer CV website built with React.js",
+  "homepage": "https://prikhoda-natalia.github.io/",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/prikhoda-natalia/prikhoda-natalia.github.io"
   },
+  "type": "module",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop -H 0.0.0.0",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build/client",
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc"
   },
-  "version": "1.0.0"
+  "dependencies": {
+    "@react-router/node": "^7.4.0",
+    "@react-router/serve": "^7.4.0",
+    "isbot": "^5.1.17",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.4.0",
+    "typeface-inconsolata": "^1.1.13",
+    "typeface-montserrat": "^1.1.13",
+    "typeface-nanum-gothic-coding": "^1.1.13",
+    "typeface-open-sans": "^1.1.13",
+    "typeface-playfair-display": "^1.1.13"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^7.4.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/node": "^20",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "gh-pages": "^6.3.0",
+    "react-router-devtools": "^1.1.0",
+    "sass-embedded": "^1.86.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
 }
