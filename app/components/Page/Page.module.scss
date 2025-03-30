@@ -1,5 +1,6 @@
 @use '../../styles/a11y' as *;
 @use '../../styles/breakpoints' as *;
+@use '../../styles/uads' as *;
 
 .this {
   display: flex;
@@ -17,23 +18,27 @@
 }
 
 .brand {
-  color: #333;
-  text-decoration: none;
+  @include uads-a(
+    $color: #333,
+    $color--active: #333,
+    $color--active-link: #333,
+    $color--active-visited: #333,
+    $color--visited: #333,
+    $cursor: pointer,
+    $outline-color--active-link: currentColor,
+    $outline-style--active-link: dotted,
+    $outline-width--active-link: 1px,
+    $outline-color--active-visited: currentColor,
+    $outline-style--active-visited: dotted,
+    $outline-width--active-visited: 1px,
+    $outline-color--focus: currentColor,
+    $outline-style--focus: dotted,
+    $outline-width--focus: 1px,
+    $text-decoration: none,
+    $user-focus: normal,
+    $user-select: element
+  );
   display: inline-block;
-
-  &:active,
-  &:visited {
-    color: #333;
-  }
-
-  &:link:active,
-  &:visited:active,
-  &:focus {
-    color: #333;
-    outline-width: 1px;
-    outline-style: dotted;
-    outline-color: currentColor;
-  }
 }
 
 .brandHeading {
@@ -100,13 +105,15 @@
 }
 
 .heading {
-  display: block;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 24px;
-  margin-left: 0;
-  font-weight: inherit;
-  font-size: inherit;
+  @include uads-h1(
+    $display: block,
+    $font-size: inherit,
+    $font-weight: inherit,
+    $margin-bottom: 24px,
+    $margin-left: 0,
+    $margin-top: 0,
+    $margin-right: 0
+  );
   position: relative;
 
   &::before {
@@ -128,14 +135,43 @@
 }
 
 .menu {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  counter-reset: -html-counter 0;
+  @include uads-ul(
+    $counter-reset: -html-counter 0,
+    $display: flex,
+    $list-style-position: outside,
+    $list-style-type: none,
+    $margin-bottom: 0,
+    $margin-left: 0,
+    $margin-right: 0,
+    $margin-top: 0,
+    $padding-bottom: 0,
+    $padding-left: 0,
+    $padding-right: 0,
+    $padding-top: 0
+  );
 }
 
 .menuLink {
+  @include uads-a(
+    $color: #333,
+    $color--active: #333,
+    $color--active-link: #333,
+    $color--active-visited: #333,
+    $color--visited: #333,
+    $cursor: pointer,
+    $outline-color--active-link: currentColor,
+    $outline-style--active-link: dotted,
+    $outline-width--active-link: 1px,
+    $outline-color--active-visited: currentColor,
+    $outline-style--active-visited: dotted,
+    $outline-width--active-visited: 1px,
+    $outline-color--focus: currentColor,
+    $outline-style--focus: dotted,
+    $outline-width--focus: 1px,
+    $text-decoration: none,
+    $user-focus: normal,
+    $user-select: element
+  );
   font-weight: 400;
   font-size: 15px;
   font-family: 'Montserrat', sans-serif;
@@ -147,22 +183,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #333;
-  text-decoration: none;
-
-  &:active,
-  &:visited {
-    color: #333;
-  }
-
-  &:link:active,
-  &:visited:active,
-  &:focus {
-    color: #333;
-    outline-width: 1px;
-    outline-style: dotted;
-    outline-color: currentColor;
-  }
 
   &::before {
     content: '';
@@ -302,33 +322,53 @@
   }
 
   .menuSwitcher {
-    display: block;
-    align-items: flex-start;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 8px;
-    color: inherit;
-    font-weight: 400;
-    font-size: 14px;
+    @include uads-button(
+      $align-items: flex-start,
+      $appearance: none,
+      $background-color: transparent,
+      $border-color: #4c4c4c,
+      $border-style: solid,
+      $border-style--active: inset,
+      $border-style--active-disabled: inset,
+      $border-width: 0,
+      $box-align: center,
+      $box-sizing: border-box,
+      $color: inherit,
+      $color--active: inherit,
+      $color--disabled: GrayText,
+      $cursor: default,
+      $display: block,
+      $font-family: inherit,
+      $font-size: 14px,
+      $font-style: normal,
+      $font-variant: normal,
+      $font-weight: 400,
+      $letter-spacing: 2,
+      $line-height: 1.25,
+      $margin-left: 0,
+      $margin-right: 0,
+      $margin-bottom: 0,
+      $margin-top: 0,
+      $outline-color--focus: currentColor,
+      $outline-style--focus: dotted,
+      $outline-width--focus: 1px,
+      $outline-offset--focus: 0,
+      $padding-top: 8px,
+      $padding-right: 8px,
+      $padding-bottom: 8px,
+      $padding-left: 8px,
+      $text-align: center,
+      $text-indent: 0,
+      $text-rendering: auto,
+      $text-shadow: none,
+      $text-transform: lowercase,
+      $user-select: element,
+      $white-space: normal,
+      $word-spacing: normal,
+      $writing-mode: horizontal-tb
+    );
     font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    line-height: 1.25;
-    letter-spacing: 2;
-    text-align: center;
-    text-transform: lowercase;
-    text-shadow: none;
-    background-color: transparent;
-    border: 0;
-
-    &:active {
-      color: inherit;
-    }
-
-    &:focus {
-      outline: 1px dotted currentColor;
-      outline-offset: 0;
-    }
-
+    
     .this_menuHidden & {
       display: none;
     }

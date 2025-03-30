@@ -1,8 +1,8 @@
-@use '../../../styles/uads' as uads;
-@use '../../../styles/breakpoints' as breakpoints;
+@use '../../../styles/uads' as *;
+@use '../../../styles/breakpoints' as *;
 
 .this {
-  @include uads.uads-dl(
+  @include uads-dl(
     $display: grid,
     $margin-bottom: 0,
     $margin-left: 0px,
@@ -18,7 +18,7 @@
 }
 
 .label {
-  @include uads.uads-dt($display: flex);
+  @include uads-dt($display: flex);
   margin-right: 16px;
   color: #5c5c5c;
   font-size: 0.9em;
@@ -27,10 +27,10 @@
 }
 
 .value {
-  @include uads.uads-dd($display: block, $margin-left: 0);
+  @include uads-dd($display: block, $margin-left: 0);
 }
 
-@media (max-width: breakpoints.$bp-max-mobile-landscape) {
+@media (max-width: $bp-max-mobile-landscape) {
   .this {
     grid-template-columns: 1fr;
     grid-row-gap: 8px;

@@ -5,8 +5,6 @@
   * Call mixin and set up default styles. If you need to use other properties - add them in component's style file.
 **/
 
-@use 'sass:map';
-
 @mixin uads-a(
   $color: #00c,
   $color--active: red,

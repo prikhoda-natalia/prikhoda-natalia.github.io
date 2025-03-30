@@ -1,5 +1,5 @@
-@use '../../../styles/breakpoints' as breakpoints;
-@use '../../../styles/uads' as uads;
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/uads' as *;
 
 .this {
   display: flex;
@@ -11,7 +11,7 @@
 }
 
 .blurb {
-  @include uads.uads-p(
+  @include uads-p(
     $display: block,
     $margin-bottom: 0,
     $margin-left: 0,
@@ -105,7 +105,7 @@
 }
 
 .tools {
-  @include uads.uads-dl(
+  @include uads-dl(
     $display: block,
     $margin-bottom: 0,
     $margin-left: 0px,
@@ -115,7 +115,7 @@
 }
 
 .toolsLabel {
-  @include uads.uads-dt($display: block);
+  @include uads-dt($display: block);
   position: absolute;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
@@ -127,11 +127,11 @@
 }
 
 .toolsValue {
-  @include uads.uads-dd($display: block, $margin-left: 0);
+  @include uads-dd($display: block, $margin-left: 0);
 }
 
 .title {
-  @include uads.uads-h3(
+  @include uads-h3(
     $display: block,
     $font-size: 18px,
     $font-weight: 400,
@@ -155,7 +155,7 @@
   }
 }
 
-@media (max-width: breakpoints.$bp-max-tablet) {
+@media (max-width: $bp-max-tablet) {
   .aside {
     margin-bottom: 16px;
   }

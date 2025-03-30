@@ -1,9 +1,20 @@
+@use '../../../styles/uads' as *;
+
 .this {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  counter-reset: -html-counter 0;
+  @include uads-ul(
+    $counter-reset: -html-counter 0,
+    $display: flex,
+    $list-style-position: outside,
+    $list-style-type: none,
+    $margin-bottom: 0,
+    $margin-left: 0,
+    $margin-right: 0,
+    $margin-top: 0,
+    $padding-bottom: 0,
+    $padding-left: 0,
+    $padding-right: 0,
+    $padding-top: 0
+  );
   font-weight: 400;
   font-size: 12px;
   font-family: 'Montserrat', sans-serif;

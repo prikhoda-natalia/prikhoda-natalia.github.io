@@ -1,6 +1,5 @@
-@use 'sass:map';
-@use './colors' as colors;
-@use './uads' as uads;
+@use './colors' as *;
+@use './uads' as *;
 
 
 * {
@@ -8,7 +7,7 @@
 }
 
 body {
-  @include uads.uads-body(
+  @include uads-body(
     $display: block,
     $margin-top: 0,
     $margin-left: 0,
@@ -23,11 +22,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.5;
   overflow-y: scroll;
-  color: colors.$color-text-base;
+  color: $color-text-base;
 }
 
 p {
-  @include uads.uads-p(
+  @include uads-p(
     $display: block,
     $margin-bottom: 1em,
     $margin-left: 0,
