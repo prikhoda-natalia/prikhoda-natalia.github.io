@@ -6,7 +6,7 @@ export default defineConfig({
   base: '/',
   plugins: [reactRouter(), tsconfigPaths()],
   build: {
-    outDir: 'dist',
+    outDir: 'build/client',
     emptyOutDir: true
   },
   css: {
