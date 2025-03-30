@@ -14,8 +14,7 @@
     "deploy": "gh-pages -d build/client",
     "build": "react-router build",
     "dev": "react-router dev",
-    "preview": "vite preview",
-    "typecheck": "tsc"
+    "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
     "@react-router/node": "^7.4.0",
