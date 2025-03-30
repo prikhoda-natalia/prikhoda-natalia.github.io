@@ -1,0 +1,32 @@
+@use '../../../styles/uads' as *;
+
+.this {
+  @include uads-ul(
+    $counter-reset: -html-counter 0,
+    $display: block,
+    $list-style-position: inside,
+    $list-style-type: none,
+    $margin-bottom: 0,
+    $margin-left: 0,
+    $margin-right: 0,
+    $margin-top: 0,
+    $padding-bottom: 0,
+    $padding-left: 0,
+    $padding-right: 0,
+    $padding-top: 0
+  );
+  font-weight: 300;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+}
+
+.item {
+  text-indent: 0;
+  margin-bottom: 10px;
+
+  &::before {
+    content: '\2014';
+    margin-right: 1ch;
+  }
+}

@@ -1,0 +1,373 @@
+@use '../../styles/a11y' as *;
+@use '../../styles/breakpoints' as *;
+
+.this {
+  display: flex;
+  flex-direction: column;
+  height: 1px;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  &_mobileMenuShown {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+.brand {
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+
+  &:active,
+  &:visited {
+    color: #333;
+  }
+
+  &:link:active,
+  &:visited:active,
+  &:focus {
+    color: #333;
+    outline-width: 1px;
+    outline-style: dotted;
+    outline-color: currentColor;
+  }
+}
+
+.brandHeading {
+  font-weight: 700;
+  font-size: 34px;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.15;
+  display: block;
+
+  &_short {
+    display: none;
+  }
+}
+
+.brandSubheading {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: 'Nanum Gothic Coding', sans-serif;
+  line-height: 1.25;
+  margin-top: 8px;
+  padding-right: 4px;
+  padding-left: 4px;
+  background-color: #272727;
+  color: #fff;
+  display: block;
+
+  &_short {
+    display: none;
+  }
+}
+
+.brandWrapper {
+  display: block;
+  flex: 1;
+}
+
+.column {
+  flex-basis: 100%;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cta {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 32px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+  padding: 8px;
+}
+
+.header {
+  display: flex;
+  padding: 24px;
+  flex: 0 0 auto;
+  background: #fff;
+}
+
+.heading {
+  display: block;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 24px;
+  margin-left: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #333;
+    left: 0;
+    top: 50%;
+    position: absolute;
+  }
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  padding-bottom: 24px;
+}
+
+.menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  counter-reset: -html-counter 0;
+}
+
+.menuLink {
+  font-weight: 400;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.25;
+  letter-spacing: 2;
+  text-transform: lowercase;
+  padding: 10px 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+
+  &:active,
+  &:visited {
+    color: #333;
+  }
+
+  &:link:active,
+  &:visited:active,
+  &:focus {
+    color: #333;
+    outline-width: 1px;
+    outline-style: dotted;
+    outline-color: currentColor;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    top: -5.5px;
+    margin-top: -8px;
+  }
+
+  &:hover::before {
+    border: 1px solid #333;
+    background: #fff;
+  }
+
+  &_active {
+    font-weight: bold;
+
+    &::before {
+      background: #333;
+    }
+  }
+}
+
+.menuSwitcher {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 32px;
+}
+
+.section {
+  flex-basis: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.skipLink {
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  color: white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-bottom-right-radius: 8px;
+  background: #272727;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 999;
+
+  &:focus {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    outline-color: transparent;
+    -webkit-transition: top 0.1s ease-in;
+    transition: top 0.1s ease-in;
+  }
+}
+
+.title {
+  font-weight: 200;
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.25;
+  text-transform: uppercase;
+  background: #fff;
+  padding: 0 16px;
+  margin-left: 16px;
+  position: relative;
+}
+
+@media (max-width: $bp-max-tablet) {
+  .brandHeading {
+    &_full {
+      @include sr-only;
+    }
+    &_short {
+      display: block;
+    }
+  }
+  .brandSubheading {
+    &_full {
+      @include sr-only;
+    }
+    &_short {
+      display: block;
+    }
+  }
+
+  .cta {
+    margin-left: 0;
+    margin-top: 32px;
+  }
+
+  .header {
+    .this_mobileMenuShown & {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto 1fr;
+      overflow: hidden;
+    }
+  }
+
+  .main {
+    display: block;
+  }
+
+  .menu {
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .menuLink {
+    flex-direction: row;
+    padding: 16px 0;
+
+    &::before {
+      top: 0;
+      margin-top: 0;
+      margin-right: 10px;
+      margin-left: -4.5px;
+    }
+  }
+
+  .menuSwitcher {
+    display: block;
+    align-items: flex-start;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 8px;
+    color: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 2;
+    text-align: center;
+    text-transform: lowercase;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+
+    &:active {
+      color: inherit;
+    }
+
+    &:focus {
+      outline: 1px dotted currentColor;
+      outline-offset: 0;
+    }
+
+    .this_menuHidden & {
+      display: none;
+    }
+  }
+
+  .menuWrapper {
+    width: 100%;
+  }
+
+  .nav {
+    .this_mobileMenuHidden & {
+      display: none;
+    }
+    .this_mobileMenuShown & {
+      margin-left: 0;
+      margin-top: 72px;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media (max-width: $bp-max-mobile-landscape) {
+  .column {
+    width: 100%;
+    padding: 12px;
+  }
+  .cta {
+    flex: 0;
+    margin-left: 0;
+    margin-top: 24px;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .menu {
+    align-items: flex-start;
+  }
+  .nav {
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,30 @@
+.this {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  counter-reset: -html-counter 0;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.25;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: inline-block;
+  text-transform: none;
+  padding: 2px 4px;
+
+  .this_dark & {
+    background-color: #5c5c5c;
+    color: #fff;
+    margin: 1px;
+  }
+  .this_light & {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #5c5c5c;
+    margin: 2px;
+  }
+}
