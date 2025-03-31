@@ -1,4 +1,6 @@
-export const experience = [
+import type { ExperiencesType } from "~/types/ExperienceType";
+
+export const experience: ExperiencesType = [
   {
     details: {
       companyName: `Carlsberg's Group, Software Engineering department`,
@@ -14,7 +16,20 @@ export const experience = [
       `Facilitated discussions in a cross-functional team of developers from different Carlsberg Group’s projects to establish guidelines for catching, processing and displaying errors across al projects in unified manner`,
       `Cadi development team - 13 developers (4 FE, 5 BE, 1 UI, 3 QA)`
     ],
-    tools: ['react.js', 'redux.js', 'redux-saga', 'typescript', 'HTML5', 'SCSS', 'indexedDB', 'graphQL', 'jest', 'react-testing-library', 'faker.js', 'storybook']
+    tools: [
+      { label: 'react.js' },
+      { label: 'redux.js' },
+      { label: 'redux-saga' },
+      { label: 'typescript' },
+      { label: 'HTML5' },
+      { label: 'SCSS' },
+      { label: 'indexedDB' },
+      { label: 'graphQL' },
+      { label: 'jest' },
+      { label: 'react-testing-library' },
+      { label: 'faker.js' },
+      { label: 'storybook' }
+    ]
   },
   {
     details: {
@@ -29,7 +44,16 @@ export const experience = [
       `Built responsive company’s website and promotional landing pages`,
       `Noah development team - 10 developers (3 FE, 3 BE, 2 UI, 2 QA)`
     ],
-    tools: ['react.js', 'gatsby.js', 'redux.js', 'HTML5', 'SCSS', 'CSS3', 'storybook', 'cypress']
+    tools: [
+      { label: 'react.js' },
+      { label: 'gatsby.js' },
+      { label: 'redux.js' },
+      { label: 'HTML5' },
+      { label: 'SCSS' },
+      { label: 'CSS3' },
+      { label: 'storybook' },
+      { label: 'cypress' }
+    ]
   },
   {
     details: {
@@ -43,7 +67,14 @@ export const experience = [
       `Created and maintained a library of reusable UI components library for cross-platform mobile applications`,
       `DEAR development team - 7 developers (4 FE, 3 BE)`
     ],
-    tools: ['vanilla JS', 'angular.js', 'HTML5', 'SCSS', 'CSS3', 'Apache Cordova']
+    tools: [
+      { label: 'vanilla JS' },
+      { label: 'angular.js' },
+      { label: 'HTML5' },
+      { label: 'SCSS' },
+      { label: 'CSS3' },
+      { label: 'Apache Cordova' }
+    ]
   },
   {
     details: {
@@ -59,7 +90,17 @@ export const experience = [
       `Created custom WordPress themes and theme functionality plugins`,
       `Sticky Pixel development team - 5 developers (3 FE, 1 BE, 1 UI)`
     ],
-    tools: ['react.js', 'gatsby.js', 'HTML5', 'SCSS', 'CSS3', 'gulp', 'wordpress', 'timber', 'cypress']
+    tools: [
+      { label: 'react.js' },
+      { label: 'gatsby.js' },
+      { label: 'HTML5' },
+      { label: 'SCSS' },
+      { label: 'CSS3' },
+      { label: 'gulp' },
+      { label: 'wordpress' },
+      { label: 'timber' },
+      { label: 'cypress' }
+    ]
   },
   {
     details: {
@@ -73,7 +114,14 @@ export const experience = [
       `Upgraded UI component system from proof-of-concept level which combined several UI frameworks to stable predictable library of custom components`,
       `Program Logistic development team - 3 developers (2 FE, 1 BE)`
     ],
-    tools: ['ember.js', 'jQuery', 'vanilla JS', 'HTML5', 'SCSS', 'CSS3']
+    tools: [
+      { label: 'ember.js' },
+      { label: 'jQuery' },
+      { label: 'vanilla JS' },
+      { label: 'HTML5' },
+      { label: 'SCSS' },
+      { label: 'CSS3' }
+    ]
   },
   {
     details: {
@@ -88,6 +136,15 @@ export const experience = [
       `Translated layout mockups from Photoshop or Invision to responsive HTML, CSS, and JS`,
       `Installed, configured settings, and managed content in different CMS (Bitrix24, Joomla, and WordPress)`
     ],
-    tools: ['jQuery', 'vanilla JS', 'HTML5', 'Twitter Bootstrap CSS', 'CSS3', 'wordpress', 'joomla', 'bitrix24']
+    tools: [
+      { label: 'jQuery' },
+      { label: 'vanilla JS' },
+      { label: 'HTML5' },
+      { label: 'Twitter Bootstrap CSS' },
+      { label: 'CSS3' },
+      { label: 'wordpress' },
+      { label: 'joomla' },
+      { label: 'bitrix24' }
+    ]
   }
 ];

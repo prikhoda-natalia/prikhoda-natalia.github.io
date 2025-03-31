@@ -1,37 +1,89 @@
-export const skillset = [
+import type { SkillsType } from "~/types/SkillType";
+
+export const skillset: SkillsType = [
   {
     blurb: '',
     title: 'UI development',
-    tools: ['Javascript', 'Typescript', 'JSX', 'HTML5', 'WAI-ARIA', 'SCSS', 'CSS3', 'tailwind.css', 'Webflow']
+    tools: [
+      { label: 'Javascript' },
+      { label: 'Typescript' },
+      { label: 'JSX' },
+      { label: 'HTML5' },
+      { label: 'WAI-ARIA' },
+      { label: 'SCSS' },
+      { label: 'CSS3' },
+      { label: 'tailwind.css' },
+      { label: 'Webflow' }
+    ]
   },
   {
     blurb: '',
     title: 'Front-end development',
-    tools: ['react.js', 'gatsby.js', 'react-router', 'react-query', 'react-hook-form', 'styled-components']
+    tools: [
+      { label: 'react.js' },
+      { label: 'gatsby.js' },
+      { label: 'react-router' },
+      { label: 'react-query' },
+      { label: 'react-hook-form' },
+      { label: 'styled-components' }
+    ]
   },
   {
     blurb: '',
     title: 'Data management',
-    tools: ['redux', 'redux-saga', 'indexedDB', 'graphQL', 'WebAPI', 'REST API']
+    tools: [
+      { label: 'redux' },
+      { label: 'redux-saga' },
+      { label: 'indexedDB' },
+      { label: 'graphQL' },
+      { label: 'WebAPI' },
+      { label: 'REST API' }
+    ]
   },
   {
     blurb: '',
     title: 'Testing',
-    tools: ['jest', 'react-testing-library', 'Cypress', 'faker.js']
+    tools: [
+      { label: 'jest' },
+      { label: 'react-testing-library' },
+      { label: 'Cypress' },
+      { label: 'faker.js' }
+    ]
   },
   {
     blurb: '',
     title: 'Automations and CI/CD',
-    tools: ['prettier', 'ESLint', 'TSLint', 'webpack', 'vite', 'gulp', 'pre-commit hook husky', 'GitHub Actions']
+    tools: [
+      { label: 'prettier' },
+      { label: 'ESLint' },
+      { label: 'TSLint' },
+      { label: 'webpack' },
+      { label: 'vite' },
+      { label: 'gulp' },
+      { label: 'pre-commit hook husky' },
+      { label: 'GitHub Actions' }
+    ]
   },
   {
     blurb: '',
     title: 'Monitoring and debugging',
-    tools: ['Redux DevTools', 'React Developer Tools', 'Requestly', 'Mockoon', 'Datadog']
+    tools: [
+      { label: 'Redux DevTools' },
+      { label: 'React Developer Tools' },
+      { label: 'Requestly' },
+      { label: 'Mockoon' },
+      { label: 'Datadog' }
+    ]
   },
   {
     blurb: '',
     title: 'Collaboration and knowledge sharing',
-    tools: ['GIT', 'Figma', 'Storybook', 'Confluence', 'JIRA']
+    tools: [
+      { label: 'GIT' },
+      { label: 'Figma' },
+      { label: 'Storybook' },
+      { label: 'Confluence' },
+      { label: 'JIRA' }
+    ]
   }
 ];
