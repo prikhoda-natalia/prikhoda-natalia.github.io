@@ -5,24 +5,17 @@ import List from '../List';
 import Tools from '../Tools';
 
 import s from './Timeline.module.scss';
+import type { ExperiencesType } from '~/types/ExperienceType';
+import type { DetailsType } from '~/types/DetailType';
 
 type TimelineProps = {
-  items: Array<{
-    details: {
-      companyName: string;
-      geo: string;
-      period: string;
-    };
-    responsibilities: Array<string>;
-    title: string;
-    tools: Array<string>;
-  }>;
+  items: ExperiencesType;
 };
 
 const Timeline = ({ items }: TimelineProps) => (
   <div className={s.this}>
     {items.map((item, index) => {
-      const itemDetails = [
+      const itemDetails: DetailsType = [
         {
           label: 'Period',
           value: item.details.period

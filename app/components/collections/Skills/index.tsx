@@ -3,13 +3,10 @@ import React from 'react';
 import Tools from '../Tools';
 
 import s from './Skills.module.scss';
+import type { SkillsType } from '~/types/SkillType';
 
 type SkillsProps = {
-  items: Array<{
-    blurb: string;
-    title: string;
-    tools: Array<string>;
-  }>;
+  items: SkillsType;
 };
 
 const Skills = ({ items }: SkillsProps) => (

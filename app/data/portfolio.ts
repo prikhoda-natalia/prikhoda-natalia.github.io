@@ -1,20 +1,42 @@
-import JemjarMain from '~/data/main.png';
+import type { ProjectsType } from '~/types/ProjectType';
 
-export const portfolio = [
+export const portfolio: ProjectsType = [
   {
-    blurb: 'UI components library for a web app on React.js',
-    details: {
-      collaboration: '2 back-end, 1 designer, 2 front-end',
-      role: 'Front-end developer (UI)',
-      website: 'https://app.jemjar.com/'
-    },
-    image: {
-      alt: '',
-      url: JemjarMain
-    },
-    summary:
-      'I was responsible for the development and support of a library of UI components that could be reused across multiple applications',
-    title: 'Jemjar',
-    tools: ['React.js', 'Sass', 'HTML5 + CSS3', 'ES6 JS', 'Cypress']
+    name: 'Portfolio Website',
+    description: 'Responsive website built with React Router + Vite framework.',
+    tools: [
+      {
+        label: 'React',
+        version: 'v19.1.0',
+      },
+      {
+        label: 'React Router',
+        version: 'v7.4.1',
+      },
+      {
+        label: 'TypeScript',
+        version: 'v5.8.2',
+      },
+      {
+        label: 'Vite',
+        version: 'v5.4.15',
+      },
+      {
+        label: 'Sass Embedded',
+        version: 'v1.86.0',
+      }
+    ],
+    links: [
+      {
+        label: 'Demo',
+        value: 'https://prikhoda-natalia.github.io/',
+        url: 'https://prikhoda-natalia.github.io/'
+      },
+      {
+        label: 'GitHub repo',
+        value: 'prikhoda-natalia.github.io',
+        url: 'https://github.com/prikhoda-natalia/prikhoda-natalia.github.io'
+      },
+    ]
   }
 ];

@@ -24,18 +24,37 @@
 
 .item {
   display: inline-block;
+  margin: 2px;
+  border: 1px solid #5c5c5c;
+}
+
+.label {
+  display: inline-block;
   text-transform: none;
   padding: 2px 4px;
 
   .this_dark & {
     background-color: #5c5c5c;
     color: #fff;
-    margin: 1px;
   }
   .this_light & {
     background-color: #fff;
     color: #333;
-    border: 1px solid #5c5c5c;
-    margin: 2px;
+  }
+}
+
+.version {
+  display: inline-block;
+  text-transform: none;
+  padding: 2px 4px;
+  font-size: 10px;
+
+  .this_dark & {
+    background-color: #fff;
+    color: #333;
+  }
+  .this_light & {
+    background-color: #5c5c5c;
+    color: #fff;
   }
 }
