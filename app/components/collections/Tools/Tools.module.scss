@@ -23,7 +23,8 @@
 }
 
 .item {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   margin: 2px;
   border: 1px solid #5c5c5c;
 }
